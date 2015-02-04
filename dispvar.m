@@ -14,6 +14,9 @@ function [] = dispvar(varargin)
 	
 	for i = start:nargin-1
 		fprintf(['%12s: ',format_str,', '], inputname(i), varargin{i});
+		if mod(i,4)==0
+			fprintf('\n')
+		end
 	end
 	fprintf(['%12s: ',format_str,'\n'], inputname(nargin), varargin{nargin});
 end
