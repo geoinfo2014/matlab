@@ -15,5 +15,5 @@ function [] = dispvar(varargin)
 	for i = start:nargin-1
 		fprintf(['%12s: ',format_str,', '], inputname(i), varargin{i});
 	end
-	fprintf('%12s: %9.3f\n', inputname(nargin), varargin{nargin});
+	fprintf(['%12s: ',format_str,'\n'], inputname(nargin), varargin{nargin});
 end
