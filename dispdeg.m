@@ -13,10 +13,10 @@ function [] = dispdeg(varargin)
 	end
 	
 	for i = start:nargin-1
-		fprintf(['%12s: ',format_str,', '], inputname(i), rad2gon(varargin{i}));
+		fprintf(['%12s: ',format_str,', '], inputname(i), rad2deg(varargin{i}));
 		if mod(i,4)==0
 			fprintf('\n')
 		end
 	end
-	fprintf(['%12s: ',format_str,'\n'], inputname(nargin), rad2gon(varargin{nargin}));
+	fprintf(['%12s: ',format_str,'\n'], inputname(nargin), rad2deg(varargin{nargin}));
 end

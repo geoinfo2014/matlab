@@ -13,10 +13,10 @@ function [] = dispgon(varargin)
 	end
 	
 	for i = start:nargin-1
-		fprintf(['%12s: ',format_str,', '], inputname(i), varargin{i});
+		fprintf(['%12s: ',format_str,', '], inputname(i), rad2gon(varargin{i}));
 		if mod(i,4)==0
 			fprintf('\n')
 		end
 	end
-	fprintf(['%12s: ',format_str,'\n'], inputname(nargin), varargin{nargin});
+	fprintf(['%12s: ',format_str,'\n'], inputname(nargin), rad2gon(varargin{nargin}));
 end
