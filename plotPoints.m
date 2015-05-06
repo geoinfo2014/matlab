@@ -17,14 +17,11 @@ function [pointsX] = plotPoints(varargin)
 	grid on;
     
     plot(cell2mat(pointsX(:,1)),cell2mat(pointsY(:,1)),'*');
-    pointsX=sortrows(pointsX,1)
-	pointsY=sortrows(pointsY,1)
+    pointsX=sortrows(pointsX,1);
+	pointsY=sortrows(pointsY,1);
     
 	set(gca,'XTick',cell2mat(pointsX(:,1)));
 	set(gca,'YTick',cell2mat(pointsY(:,1)));
 	set(gca,'XTickLabel',str2mat(pointsX(:,2)));
 	set(gca,'YTickLabel',str2mat(pointsY(:,2)));
-    
-    pointsX
-    pointsY
 end
