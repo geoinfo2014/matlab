@@ -10,14 +10,10 @@ function [pointsX] = plotPoints(varargin)
 		pointsX{i,2}=inputname(i*2-1);
 		pointsY{i,1}=varargin{i*2};
 		pointsY{i,2}=inputname(i*2);
-    end
+	end
 
-	figure();    
-	hold();
-	grid on;
-    
-    plot(cell2mat(pointsX(:,1)),cell2mat(pointsY(:,1)),'*');
-    pointsX=sortrows(pointsX,1);
+	plot(cell2mat(pointsX(:,1)),cell2mat(pointsY(:,1)),'*');
+	pointsX=sortrows(pointsX,1);
 	pointsY=sortrows(pointsY,1);
     
 	set(gca,'XTick',cell2mat(pointsX(:,1)));
